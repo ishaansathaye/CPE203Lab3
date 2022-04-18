@@ -256,6 +256,10 @@ public class TestCases
       assertEquals(expected, ws.getCircles());
    }
 
+   // Writes getRectangles()
+   // Write getTriangles()
+   // Write size()
+
    /* HINT - comment out implementation tests for the classes that you have not 
     * yet implemented */
    @Test
