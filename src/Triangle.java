@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.awt.Point;
 
-class Triangle implements Shape {
+public class Triangle implements Shape {
     
     private Point a;
     private Point b;

@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.awt.Point;
 
-class Circle implements Shape {
+public class Circle implements Shape {
 
     private double radius;
     private Point center;

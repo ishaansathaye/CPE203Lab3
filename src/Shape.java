@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.awt.Point;
 
-interface Shape {
+public interface Shape {
     
     Color getColor();
     void setColor(Color color);

@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.awt.Point;
 
-class Rectangle implements Shape {
+public class Rectangle implements Shape {
     
     private double width;
     private double height;
