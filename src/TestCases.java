@@ -256,9 +256,77 @@ public class TestCases
       assertEquals(expected, ws.getCircles());
    }
 
-   // Writes getRectangles()
+   @Test
+   public void testWorkSpaceGetRectangles() {
+      WorkSpace ws = new WorkSpace();
+      List<Rectangle> expected = new ArrayList<>();
+
+      Rectangle r1 = new Rectangle(1.234, 5.678, new Point(2, 3), Color.CYAN);
+      Circle c1 = new Circle(5.678, new Point(2, 3), Color.BLACK);
+      Triangle t1 = new Triangle(new Point(0,0), new Point(2,-4), new Point(3, 0),
+      Color.CYAN);
+      Rectangle r2 = new Rectangle(20.39342, 10.678, new Point(6, 9), Color.RED);
+
+      ws.add(r1);
+      ws.add(c1);
+      ws.add(t1);
+      ws.add(r2);
+
+      expected.add(r1);
+      expected.add(r2);
+
+      assertEquals(expected, ws.getRectangles());
+
+   }
+
    // Write getTriangles()
+   @Test
+   public void testWorkSpaceGetTriangles() {
+      WorkSpace ws = new WorkSpace();
+      List<Triangle> expected = new ArrayList<>();
+
+      Rectangle r1 = new Rectangle(1.234, 5.678, new Point(2, 3), Color.CYAN);
+      Circle c1 = new Circle(5.678, new Point(2, 3), Color.BLACK);
+      Triangle t1 = new Triangle(new Point(0,0), new Point(2,-4), new Point(3, 0),
+      Color.CYAN);
+      Rectangle r2 = new Rectangle(20.39342, 10.678, new Point(6, 9), Color.RED);
+      Triangle t2 = new Triangle(new Point(0,0), new Point(2,-4), new Point(3, 0), Color.RED);
+
+      ws.add(r1);
+      ws.add(c1);
+      ws.add(t1);
+      ws.add(r2);
+      ws.add(t2);
+
+      expected.add(t1);
+      expected.add(t2);
+
+      assertEquals(expected, ws.getTriangles());
+
+   }
+
    // Write size()
+   @Test
+   public void testWorkSpaceSize() {
+      WorkSpace ws = new WorkSpace();
+
+      Rectangle r1 = new Rectangle(1.234, 5.678, new Point(2, 3), Color.CYAN);
+      Circle c1 = new Circle(5.678, new Point(2, 3), Color.BLACK);
+      Triangle t1 = new Triangle(new Point(0,0), new Point(2,-4), new Point(3, 0),
+      Color.CYAN);
+      Rectangle r2 = new Rectangle(20.39342, 10.678, new Point(6, 9), Color.RED);
+      Triangle t2 = new Triangle(new Point(0,0), new Point(2,-4), new Point(3, 0), Color.RED);
+
+      ws.add(r1);
+      ws.add(c1);
+      ws.add(t1);
+      ws.add(r2);
+      ws.add(t2);
+
+      assertEquals(5, ws.size());
+   
+   }
+      
 
    /* HINT - comment out implementation tests for the classes that you have not 
     * yet implemented */
